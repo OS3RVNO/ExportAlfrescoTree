@@ -8,11 +8,17 @@
   <img alt="PowerShell 5.1+" src="https://img.shields.io/badge/PowerShell-5.1%2B-5391FE?logo=powershell&logoColor=white">
   <img alt="Platform Windows" src="https://img.shields.io/badge/Platform-Windows-0078D6?logo=windows&logoColor=white">
   <img alt="License Unlicense" src="https://img.shields.io/badge/License-Unlicense-blue.svg">
+  <img alt="GitHub Pages" src="https://img.shields.io/badge/Site-GitHub%20Pages-222222?logo=githubpages&logoColor=white">
 </p>
 
 `ExportAlfrescoTree` is a focused PowerShell utility for downloading a complete
 folder tree from Alfresco through the public REST API, recreating the same
 structure locally, and optionally generating a ZIP archive for handoff or backup.
+
+## Project Links
+
+- Website: `https://os3rvno.github.io/ExportAlfrescoTree/`
+- Repository: `https://github.com/OS3RVNO/ExportAlfrescoTree`
 
 ## Why This Repository
 
@@ -123,6 +129,17 @@ Errors:         0
 - structured file logging
 - filtering by file extension or date
 - automated tests and PowerShell linting
+
+## Search Visibility
+
+This repository now includes:
+
+- a keyword-focused README
+- repository topics and description
+- a dedicated GitHub Pages landing page
+- crawl-friendly metadata, `robots.txt`, and `sitemap.xml`
+
+These changes improve discoverability, but search indexing is never guaranteed.
 
 ## License
 

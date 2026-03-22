@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExportAlfrescoTree | PowerShell Alfresco Export Script</title>
+  <meta name="description" content="PowerShell script to export an Alfresco folder tree with preserved structure, retry logic, Windows-safe file names, and optional ZIP packaging.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://os3rvno.github.io/ExportAlfrescoTree/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ExportAlfrescoTree">
+  <meta property="og:description" content="Export an Alfresco folder tree with PowerShell, preserve the structure locally, and optionally package it as ZIP.">
+  <meta property="og:url" content="https://os3rvno.github.io/ExportAlfrescoTree/">
+  <meta property="og:site_name" content="ExportAlfrescoTree">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ExportAlfrescoTree">
+  <meta name="twitter:description" content="PowerShell script for exporting Alfresco folder trees with retries, clean logs, and optional ZIP output.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareSourceCode",
+      "name": "ExportAlfrescoTree",
+      "codeRepository": "https://github.com/OS3RVNO/ExportAlfrescoTree",
+      "license": "https://unlicense.org/",
+      "programmingLanguage": "PowerShell",
+      "runtimePlatform": "Windows PowerShell 5.1+, PowerShell 7+",
+      "description": "PowerShell script to export an Alfresco folder tree with preserved structure, retry logic, safe file naming, and optional ZIP packaging.",
+      "keywords": [
+        "alfresco export",
+        "powershell script",
+        "alfresco backup",
+        "rest api",
+        "windows automation",
+        "zip export"
+      ],
+      "author": {
+        "@type": "Person",
+        "name": "OS3RVNO"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">PowerShell Utility</p>
+        <h1>Export Alfresco folders with a cleaner workflow.</h1>
+        <p class="lead">
+          Download a complete Alfresco folder tree, preserve its local structure,
+          recover gracefully from transient failures, and optionally package the
+          result as a ZIP archive.
+        </p>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/OS3RVNO/ExportAlfrescoTree">View Repository</a>
+          <a class="button secondary" href="https://github.com/OS3RVNO/ExportAlfrescoTree/blob/main/Export-AlfrescoFolderTree.ps1">Open Script</a>
+        </div>
+        <ul class="hero-points">
+          <li>Recursive Alfresco export</li>
+          <li>Windows-safe file handling</li>
+          <li>Optional ZIP packaging</li>
+          <li>Readable console UI</li>
+        </ul>
+      </div>
+
+      <div class="hero-panel" aria-label="Console preview">
+        <div class="terminal">
+          <div class="terminal-bar">
+            <span></span><span></span><span></span>
+          </div>
+          <pre>[CONFIGURATION]
+URL:            https://alfresco-site.example
+Root Node:      workspace://SpacesStore/xxxxxxxx
+Destination:    C:\Temp\AlfrescoExport
+ZIP Output:     C:\Temp\AlfrescoExport.zip
+
+[TRANSFER]
+[DIR ] Contracts
+  [FILE] contract-001.pdf
+    [OK  ] Saved to: C:\Temp\AlfrescoExport\Contracts\contract-001.pdf
+  [FILE] contract-002.pdf
+    [SKIP] Existing file skipped: contract-002.pdf
+
+[RUN SUMMARY]
+Folders:        3
+Files Found:    12
+Downloaded:     10
+Skipped:        2
+Errors:         0</pre>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section grid-two">
+        <article class="card">
+          <p class="section-label">What It Solves</p>
+          <h2>Built for practical Alfresco exports.</h2>
+          <p>
+            This project is useful when you need a repeatable way to export
+            documents from Alfresco without manually navigating the UI or
+            rewriting the same one-off script every time.
+          </p>
+        </article>
+
+        <article class="card accent">
+          <p class="section-label">Use Cases</p>
+          <ul class="feature-list">
+            <li>Local backups of Alfresco folder trees</li>
+            <li>Migration preparation and archive extraction</li>
+            <li>Repeatable exports for operations teams</li>
+            <li>Document handoff as ZIP packages</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="section">
+        <p class="section-label">Features</p>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>Recursive traversal</h3>
+            <p>Walks the Alfresco tree and recreates the same hierarchy locally.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Retry logic</h3>
+            <p>Retries transient HTTP and download failures automatically.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Safer file names</h3>
+            <p>Sanitizes invalid Windows file names before writing to disk.</p>
+          </article>
+          <article class="feature-card">
+            <h3>ZIP output</h3>
+            <p>Creates a clean archive at the end of the export when requested.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Skip existing mode</h3>
+            <p>Supports repeatable runs without redownloading everything.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Readable output</h3>
+            <p>Shows colorized logs, sections, and a final run summary.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section grid-two">
+        <article class="card">
+          <p class="section-label">Quick Start</p>
+          <h2>Run the export in a few lines.</h2>
+          <pre class="code-block"><code>$credential = Get-Credential
+
+.\Export-AlfrescoFolderTree.ps1 `
+  -AlfrescoUrl "https://alfresco-site.example" `
+  -RootNodeId "workspace://SpacesStore/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" `
+  -DestinationPath "C:\Temp\AlfrescoExport" `
+  -Credential $credential `
+  -ZipFilePath "C:\Temp\AlfrescoExport.zip"</code></pre>
+        </article>
+
+        <article class="card">
+          <p class="section-label">Repository</p>
+          <h2>Optimized for discoverability.</h2>
+          <p>
+            The repository includes a focused README, repository topics, a clear
+            description, and this GitHub Pages site with search-friendly page metadata.
+          </p>
+          <div class="link-stack">
+            <a href="https://github.com/OS3RVNO/ExportAlfrescoTree">GitHub repository</a>
+            <a href="https://github.com/OS3RVNO/ExportAlfrescoTree/blob/main/README.md">README</a>
+            <a href="https://github.com/OS3RVNO/ExportAlfrescoTree/blob/main/Export-AlfrescoFolderTree.ps1">Main script</a>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
