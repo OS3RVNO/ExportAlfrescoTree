@@ -39,6 +39,8 @@ jobs:
             'docs/assets/hero-preview.svg',
             'docs/assets/hero-preview.png',
             'docs/assets/hero-preview-render.html',
+            'docs/assets/readme-preview-render.html',
+            'docs/assets/readme-preview.png',
             'docs/assets/favicon.svg'
           )
 

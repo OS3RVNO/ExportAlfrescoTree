@@ -18,7 +18,7 @@ folder tree from Alfresco through the public REST API, recreating the same
 structure locally, and optionally generating a ZIP archive for handoff or backup.
 
 <p align="center">
-  <img src="docs/assets/hero-preview.png" alt="ExportAlfrescoTree preview" width="1000" height="338">
+  <img src="docs/assets/readme-preview.png" alt="ExportAlfrescoTree preview" width="760">
 </p>
 
 ## Project Links
