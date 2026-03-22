@@ -1,82 +1,73 @@
-<svg width="1600" height="620" viewBox="0 0 1600 620" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<svg width="1600" height="540" viewBox="0 0 1600 540" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">ExportAlfrescoTree preview</title>
-  <desc id="desc">A refined preview banner for the ExportAlfrescoTree repository.</desc>
+  <desc id="desc">A compact repository banner for ExportAlfrescoTree.</desc>
   <defs>
-    <linearGradient id="bg" x1="104" y1="40" x2="1458" y2="590" gradientUnits="userSpaceOnUse">
+    <linearGradient id="bg" x1="86" y1="30" x2="1488" y2="516" gradientUnits="userSpaceOnUse">
       <stop stop-color="#FFF8EE"/>
-      <stop offset="1" stop-color="#F3E9D8"/>
+      <stop offset="1" stop-color="#F4E8D6"/>
     </linearGradient>
-    <linearGradient id="shell" x1="220" y1="128" x2="1368" y2="522" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFFDF8" stop-opacity="0.96"/>
-      <stop offset="1" stop-color="#FFF4E8" stop-opacity="0.92"/>
+    <linearGradient id="shell" x1="188" y1="96" x2="1406" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDF9" stop-opacity="0.97"/>
+      <stop offset="1" stop-color="#FFF3E5" stop-opacity="0.93"/>
     </linearGradient>
-    <linearGradient id="terminal" x1="912" y1="148" x2="1368" y2="510" gradientUnits="userSpaceOnUse">
+    <linearGradient id="terminal" x1="926" y1="118" x2="1376" y2="430" gradientUnits="userSpaceOnUse">
       <stop stop-color="#0C221D"/>
-      <stop offset="1" stop-color="#132B25"/>
+      <stop offset="1" stop-color="#132D26"/>
     </linearGradient>
-    <linearGradient id="chip" x1="0" y1="0" x2="172" y2="58" gradientUnits="userSpaceOnUse">
+    <linearGradient id="pill" x1="0" y1="0" x2="196" y2="54" gradientUnits="userSpaceOnUse">
       <stop stop-color="#116466"/>
       <stop offset="1" stop-color="#E2A458"/>
     </linearGradient>
-    <filter id="shadow" x="132" y="84" width="1336" height="492" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <filter id="shadow" x="124" y="58" width="1352" height="450" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
       <feFlood flood-opacity="0" result="BackgroundImageFix"/>
       <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-      <feOffset dy="20"/>
-      <feGaussianBlur stdDeviation="34"/>
+      <feOffset dy="18"/>
+      <feGaussianBlur stdDeviation="30"/>
       <feColorMatrix type="matrix" values="0 0 0 0 0.0705882 0 0 0 0 0.176471 0 0 0 0 0.160784 0 0 0 0.14 0"/>
       <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_2"/>
       <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_2" result="shape"/>
     </filter>
   </defs>
 
-  <rect width="1600" height="620" fill="url(#bg)"/>
-  <circle cx="183" cy="118" r="144" fill="#116466" fill-opacity="0.08"/>
-  <circle cx="1430" cy="118" r="128" fill="#E2A458" fill-opacity="0.12"/>
-  <circle cx="1460" cy="520" r="188" fill="#116466" fill-opacity="0.06"/>
-  <circle cx="98" cy="530" r="146" fill="#E2A458" fill-opacity="0.08"/>
+  <rect width="1600" height="540" fill="url(#bg)"/>
+  <circle cx="170" cy="106" r="132" fill="#116466" fill-opacity="0.08"/>
+  <circle cx="1436" cy="110" r="122" fill="#E2A458" fill-opacity="0.12"/>
+  <circle cx="1454" cy="468" r="154" fill="#116466" fill-opacity="0.06"/>
+  <circle cx="88" cy="456" r="118" fill="#E2A458" fill-opacity="0.07"/>
 
   <g filter="url(#shadow)">
-    <rect x="200" y="126" width="1200" height="408" rx="34" fill="url(#shell)"/>
-    <rect x="886" y="148" width="472" height="364" rx="28" fill="url(#terminal)"/>
-    <rect x="226" y="148" width="620" height="364" rx="28" fill="white" fill-opacity="0.42"/>
-    <path d="M846 148H886V512H846C819.49 512 798 490.51 798 464V196C798 169.49 819.49 148 846 148Z" fill="white" fill-opacity="0.18"/>
+    <rect x="182" y="94" width="1236" height="374" rx="34" fill="url(#shell)"/>
+    <rect x="214" y="122" width="654" height="318" rx="28" fill="white" fill-opacity="0.42"/>
+    <rect x="902" y="118" width="456" height="326" rx="28" fill="url(#terminal)"/>
+    <path d="M868 122H902V440H868C841.49 440 820 418.51 820 392V170C820 143.49 841.49 122 868 122Z" fill="white" fill-opacity="0.18"/>
   </g>
 
-  <rect x="258" y="184" width="194" height="46" rx="23" fill="url(#chip)"/>
-  <text x="292" y="213" fill="#FFF8EF" font-family="Space Grotesk, Arial, sans-serif" font-size="21" font-weight="700" letter-spacing="0.1em">POWERSHELL</text>
+  <rect x="252" y="156" width="202" height="46" rx="23" fill="url(#pill)"/>
+  <text x="288" y="185" fill="#FFF8EF" font-family="Space Grotesk, Arial, sans-serif" font-size="21" font-weight="700" letter-spacing="0.1em">POWERSHELL</text>
 
-  <text x="258" y="302" fill="#102018" font-family="Space Grotesk, Arial, sans-serif" font-size="66" font-weight="700">
-    <tspan x="258" dy="0">Export Alfresco</tspan>
-    <tspan x="258" dy="76">folder trees</tspan>
+  <text x="252" y="266" fill="#102018" font-family="Space Grotesk, Arial, sans-serif" font-size="62" font-weight="700">
+    <tspan x="252" dy="0">Export Alfresco</tspan>
+    <tspan x="252" dy="70">folder trees</tspan>
   </text>
 
-  <text x="258" y="430" fill="#4F6557" font-family="Space Grotesk, Arial, sans-serif" font-size="28" font-weight="500">
+  <text x="252" y="382" fill="#4F6557" font-family="Space Grotesk, Arial, sans-serif" font-size="26" font-weight="500">
     Reliable PowerShell export for Alfresco,
   </text>
-  <text x="258" y="468" fill="#4F6557" font-family="Space Grotesk, Arial, sans-serif" font-size="28" font-weight="500">
+  <text x="252" y="416" fill="#4F6557" font-family="Space Grotesk, Arial, sans-serif" font-size="26" font-weight="500">
     with retries, clean logs, and optional ZIP output.
   </text>
 
-  <rect x="922" y="176" width="84" height="11" rx="5.5" fill="#E2A458"/>
-  <rect x="1020" y="176" width="84" height="11" rx="5.5" fill="#92B678"/>
-  <rect x="1118" y="176" width="84" height="11" rx="5.5" fill="#6DA9C0"/>
+  <rect x="932" y="146" width="84" height="11" rx="5.5" fill="#E2A458"/>
+  <rect x="1030" y="146" width="84" height="11" rx="5.5" fill="#92B678"/>
+  <rect x="1128" y="146" width="84" height="11" rx="5.5" fill="#6DA9C0"/>
 
-  <text x="938" y="240" fill="#DDE8DE" font-family="IBM Plex Mono, monospace" font-size="22">[CONFIGURATION]</text>
-  <text x="938" y="278" fill="#A8C5B7" font-family="IBM Plex Mono, monospace" font-size="18">URL:         https://alfresco-site.example</text>
-  <text x="938" y="309" fill="#A8C5B7" font-family="IBM Plex Mono, monospace" font-size="18">Root Node:   workspace://SpacesStore/xxxxxxxx</text>
-  <text x="938" y="340" fill="#A8C5B7" font-family="IBM Plex Mono, monospace" font-size="18">Destination: C:\Temp\AlfrescoExport</text>
+  <text x="950" y="206" fill="#DDE8DE" font-family="IBM Plex Mono, monospace" font-size="22">[CONFIGURATION]</text>
+  <text x="950" y="242" fill="#A8C5B7" font-family="IBM Plex Mono, monospace" font-size="18">URL:         https://alfresco-site.example</text>
+  <text x="950" y="272" fill="#A8C5B7" font-family="IBM Plex Mono, monospace" font-size="18">Root Node:   workspace://SpacesStore/xxxxxxxx</text>
+  <text x="950" y="302" fill="#A8C5B7" font-family="IBM Plex Mono, monospace" font-size="18">Destination: C:\Temp\AlfrescoExport</text>
 
-  <text x="938" y="400" fill="#DDE8DE" font-family="IBM Plex Mono, monospace" font-size="22">[TRANSFER]</text>
-  <text x="938" y="434" fill="#87E0C7" font-family="IBM Plex Mono, monospace" font-size="18">[DIR ] Contracts</text>
-  <text x="968" y="465" fill="#F3F7F3" font-family="IBM Plex Mono, monospace" font-size="18">[FILE] contract-001.pdf</text>
-  <text x="998" y="496" fill="#98D99B" font-family="IBM Plex Mono, monospace" font-size="18">[OK  ] Saved to local path</text>
-
-  <rect x="262" y="560" width="194" height="26" rx="13" fill="#102018" fill-opacity="0.12"/>
-  <text x="285" y="577" fill="#0E2A25" font-family="Space Grotesk, Arial, sans-serif" font-size="15" font-weight="700">REST API</text>
-  <text x="370" y="577" fill="#0E2A25" font-family="Space Grotesk, Arial, sans-serif" font-size="15" font-weight="700">WINDOWS</text>
-
-  <rect x="476" y="560" width="228" height="26" rx="13" fill="#102018" fill-opacity="0.12"/>
-  <text x="499" y="577" fill="#0E2A25" font-family="Space Grotesk, Arial, sans-serif" font-size="15" font-weight="700">OPTIONAL ZIP PACKAGING</text>
-
-  <text x="1186" y="578" fill="#35574C" font-family="Space Grotesk, Arial, sans-serif" font-size="18" font-weight="700">ExportAlfrescoTree</text>
+  <text x="950" y="338" fill="#DDE8DE" font-family="IBM Plex Mono, monospace" font-size="22">[TRANSFER]</text>
+  <text x="950" y="370" fill="#87E0C7" font-family="IBM Plex Mono, monospace" font-size="18">[DIR ] Contracts</text>
+  <text x="980" y="400" fill="#F3F7F3" font-family="IBM Plex Mono, monospace" font-size="18">[FILE] contract-001.pdf</text>
+  <text x="1010" y="430" fill="#98D99B" font-family="IBM Plex Mono, monospace" font-size="18">[OK ] Saved to local path</text>
 </svg>

@@ -37,6 +37,8 @@ jobs:
             'docs/robots.txt',
             'docs/sitemap.xml',
             'docs/assets/hero-preview.svg',
+            'docs/assets/hero-preview.png',
+            'docs/assets/hero-preview-render.html',
             'docs/assets/favicon.svg'
           )
 
