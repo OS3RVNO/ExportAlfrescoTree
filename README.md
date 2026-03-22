@@ -1,30 +1,30 @@
-# Powershell
+# ExportAlfrescoTree
 
-Script PowerShell per scaricare in modo ricorsivo una cartella Alfresco, ricreare
-l'alberatura locale e, se richiesto, generare anche un archivio ZIP finale.
+PowerShell script to recursively download an Alfresco folder tree, recreate the
+same structure locally, and optionally generate a ZIP archive at the end.
 
-## Cosa e stato migliorato
+## Improvements Included
 
-- Nessuna credenziale hardcoded nel file.
-- Parametri espliciti per URL, nodo radice, destinazione e ZIP.
-- Supporto alla paginazione dell'API Alfresco.
-- Retry automatico per richieste HTTP e download.
-- Gestione dei nomi file non validi su Windows.
-- Creazione delle cartelle vuote durante la ricorsione.
-- Riepilogo finale con contatori utili.
-- Console UI colorata con banner, avanzamento e log gerarchico piu leggibile.
+- No hardcoded credentials in the script.
+- Explicit parameters for URL, root node, destination path, and ZIP output.
+- Support for Alfresco API pagination.
+- Automatic retry logic for HTTP requests and downloads.
+- Safe handling of invalid Windows file names.
+- Creation of empty folders during recursive traversal.
+- Clear final summary with useful counters.
+- Improved console UI with banner, progress reporting, and readable hierarchical logs.
 
-## Requisiti
+## Requirements
 
-- Windows PowerShell 5.1 o PowerShell 7+
-- Accesso HTTP/HTTPS a un'istanza Alfresco
-- Credenziali valide per l'API REST pubblica di Alfresco
+- Windows PowerShell 5.1 or PowerShell 7+
+- HTTP/HTTPS access to an Alfresco instance
+- Valid credentials for the Alfresco public REST API
 
-## File principali
+## Main File
 
-- `Export-AlfrescoFolderTree.ps1`: script principale
+- `Export-AlfrescoFolderTree.ps1`: main script
 
-## Esempio rapido
+## Quick Start
 
 ```powershell
 $credential = Get-Credential
@@ -38,36 +38,36 @@ $credential = Get-Credential
     -Verbose
 ```
 
-## Esperienza di esecuzione
+## Execution Experience
 
-Durante il run lo script mostra:
+During execution, the script shows:
 
-- banner iniziale con configurazione della sessione
-- log colorato per cartelle, file, skip, errori e successi
-- progress bar di avanzamento
-- riepilogo finale piu leggibile
+- a startup banner with the current session settings
+- colorized logs for folders, files, skipped items, errors, and successful downloads
+- a progress bar during export
+- a cleaner final run summary
 
-## Parametri principali
+## Main Parameters
 
-- `-AlfrescoUrl`: URL base dell'istanza Alfresco
-- `-RootNodeId`: node id della cartella da esportare
-- `-DestinationPath`: cartella locale di destinazione
-- `-Credential`: oggetto `PSCredential`
-- `-ZipFilePath`: opzionale, crea un file ZIP finale
-- `-PageSize`: numero di elementi richiesti per pagina API
-- `-MaxRetryCount`: numero di retry in caso di errore temporaneo
-- `-SkipExisting`: salta i file gia presenti nel path di destinazione
+- `-AlfrescoUrl`: base URL of the Alfresco instance
+- `-RootNodeId`: node ID of the folder to export
+- `-DestinationPath`: local destination folder
+- `-Credential`: `PSCredential` object
+- `-ZipFilePath`: optional final ZIP archive path
+- `-PageSize`: number of items requested per API page
+- `-MaxRetryCount`: retry count for transient failures
+- `-SkipExisting`: skip files that already exist in the destination path
 
-## Note operative
+## Operational Notes
 
-- Lo script usa autenticazione Basic verso l'API REST pubblica di Alfresco.
-- Se un nome file contiene caratteri non validi per Windows, viene sanificato.
-- Se viene specificato `-ZipFilePath`, un eventuale ZIP esistente viene sovrascritto.
-- Il file ZIP non deve stare dentro `-DestinationPath`, altrimenti la compressione viene bloccata.
+- The script uses Basic authentication against the Alfresco public REST API.
+- File names containing invalid Windows characters are sanitized automatically.
+- If `-ZipFilePath` is specified, any existing ZIP at that location is overwritten.
+- The ZIP file must not be created inside `-DestinationPath`, otherwise compression is blocked.
 
-## Miglioramenti futuri possibili
+## Possible Future Enhancements
 
-- Supporto OAuth o token-based authentication
-- Log su file strutturato
-- Filtri per estensione o data
-- Test automatici e lint PowerShell
+- OAuth or token-based authentication support
+- Structured file logging
+- Filtering by file extension or date
+- Automated tests and PowerShell linting
