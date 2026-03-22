@@ -192,6 +192,12 @@ a {
   margin-top: 28px;
 }
 
+.signal-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
 .grid-two {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -199,7 +205,8 @@ a {
 }
 
 .card,
-.feature-card {
+.feature-card,
+.signal-card {
   border: 1px solid var(--line);
   border-radius: 28px;
   background: var(--surface);
@@ -241,6 +248,34 @@ a {
   padding: 22px;
 }
 
+.signal-card {
+  padding: 22px;
+  background:
+    linear-gradient(140deg, rgba(17, 100, 102, 0.12), rgba(255, 255, 255, 0.82)),
+    var(--surface-strong);
+}
+
+.signal-kicker {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--accent-strong);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.signal-card strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.12rem;
+}
+
+.signal-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
 .feature-card h3 {
   margin: 0 0 8px;
   font-size: 1.08rem;
@@ -274,6 +309,7 @@ a {
 @media (max-width: 960px) {
   .hero,
   .grid-two,
+  .signal-strip,
   .feature-grid {
     grid-template-columns: 1fr;
   }

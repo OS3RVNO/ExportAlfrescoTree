@@ -1,0 +1,13 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">ExportAlfrescoTree favicon</title>
+  <defs>
+    <linearGradient id="g" x1="16" y1="12" x2="112" y2="116" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#116466"/>
+      <stop offset="1" stop-color="#E2A458"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="112" height="112" rx="28" fill="#102018"/>
+  <rect x="18" y="18" width="92" height="92" rx="22" fill="url(#g)"/>
+  <path d="M42 42H88V54H56V60H82V72H56V86H42V42Z" fill="#FFF7EC"/>
+  <path d="M66 42H102V54H80V60H98V72H80V86H66V42Z" fill="#102018" fill-opacity="0.78"/>
+</svg>

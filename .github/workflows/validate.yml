@@ -1,0 +1,48 @@
+name: Validate
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate PowerShell script syntax
+        shell: pwsh
+        run: |
+          $tokens = $null
+          $errors = $null
+          [System.Management.Automation.Language.Parser]::ParseFile((Join-Path $PWD 'Export-AlfrescoFolderTree.ps1'), [ref]$tokens, [ref]$errors) | Out-Null
+
+          if ($errors.Count -gt 0) {
+            $errors | ForEach-Object { Write-Error $_.Message }
+            exit 1
+          }
+
+      - name: Validate repository assets
+        shell: pwsh
+        run: |
+          $requiredPaths = @(
+            'README.md',
+            'CHANGELOG.md',
+            'docs/index.html',
+            'docs/styles.css',
+            'docs/robots.txt',
+            'docs/sitemap.xml',
+            'docs/assets/hero-preview.svg',
+            'docs/assets/favicon.svg'
+          )
+
+          foreach ($path in $requiredPaths) {
+            if (-not (Test-Path $path)) {
+              Write-Error "Missing required file: $path"
+              exit 1
+            }
+          }
